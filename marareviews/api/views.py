@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from django.db.models import Subquery
 from .models import Restaurant, Menu, MenuOption, Review
 from .serializers import UserSerializer, RestaurantSerializer, MenuSerializer, MenuOptionSerializer, ReviewSerializer
 
