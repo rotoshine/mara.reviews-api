@@ -124,3 +124,7 @@ dmypy.json
 
 # config
 .env
+
+# IDE
+.idea
+.vscode
