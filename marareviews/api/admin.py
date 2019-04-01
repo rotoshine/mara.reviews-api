@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Restaurant, MenuOption, Menu, Review
 
-# Register your models here.
+admin.register(Restaurant)
+admin.register(MenuOption)
+admin.register(Menu)
+admin.register(Review)

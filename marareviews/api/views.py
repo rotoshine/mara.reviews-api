@@ -1,6 +1,7 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from rest_framework import viewsets
-from .serializers import UserSerializer, GroupSerializer
+from .models import Restaurant, Menu, MenuOption, Review
+from .serializers import UserSerializer, RestaurantSerializer, MenuSerializer, MenuOptionSerializer, ReviewSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -11,9 +12,21 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-class GroupViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
+class RestaurantViewSet(viewsets.ModelViewSet):
+    queryset = Restaurant.objects.all()
+    serializer_class = RestaurantSerializer
+
+
+class MenuViewSet(viewsets.ModelViewSet):
+    queryset = Menu.objects.all()
+    serializer_class = MenuSerializer
+
+
+class MenuOptionViewSet(viewsets.ModelViewSet):
+    queryset = MenuOption.objects.all()
+    serializer_class = MenuOptionSerializer
+
+
+class ReviewViewSet(viewsets.ModelViewSet):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
