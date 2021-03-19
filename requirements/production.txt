@@ -4,4 +4,4 @@ psycopg2-binary==2.7.7
 
 # django
 Django==2.1.7
-djangorestframework==3.9.2
+djangorestframework==3.11.2
